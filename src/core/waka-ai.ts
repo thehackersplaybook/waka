@@ -1,25 +1,28 @@
-import { openai } from "@ai-sdk/openai";
-import { generateText } from "ai";
 import { Prompts } from "./prompts";
+import { AiFactory } from "./ai-factory";
+import { AiModel } from "../models";
+import { z } from "zod";
 
 export class WakaAI {
-  public static async getDetectionResult(text: string): Promise<any> {
+  public static async getDetectionResult(
+    text: string,
+    model: AiModel = "openai"
+  ): Promise<any> {
+    console.log("getDetectionResult.params", { text, model });
     if (!text) {
       throw new Error("Text is required");
     }
 
-    return generateText({
-      model: openai("gpt-4o"),
-      prompt: Prompts.DETECT_SCORE(text),
-    })
-      .then(({ text: score }) =>
-        generateText({
-          model: openai("gpt-4o"),
-          prompt: Prompts.DETECT_REASONING(score),
-        }).then(({ text: reasoning }) => ({ score, reasoning }))
-      )
-      .catch((error) => {
-        throw new Error("ai-detection: failed to process the text");
-      });
+    const aiClient = AiFactory.createByModel(model);
+    const { object: result } = await aiClient.generateObject({
+      prompt: Prompts.DETECT_SCORE_AND_REASONING(text),
+      schema: z.object({
+        score: z.number().min(0).max(1),
+        reasoning: z.string(),
+      }),
+    });
+
+    console.log("getDetectionResult.result", result);
+    return result;
   }
 }

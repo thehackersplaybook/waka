@@ -1,5 +1,6 @@
 import express from "express";
 import { WakaAI } from "../core";
+import { AiModel } from "../models";
 
 const router = express.Router();
 
@@ -21,8 +22,10 @@ router.post(
   validateRequest,
   async (req: express.Request, res: express.Response): Promise<any> => {
     try {
+      const model = req.body.model as AiModel;
       const { score, reasoning } = await WakaAI.getDetectionResult(
-        req.body.text
+        req.body.text,
+        model
       );
       res.json({ score, reasoning });
     } catch (error) {
