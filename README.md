@@ -38,7 +38,7 @@ Ensure you have the following installed on your system:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/waka.git
+   git clone https://github.com/ythehackersplaybook/waka.git
    cd waka
    ```
 2. Install dependencies:
