@@ -30,12 +30,14 @@
 ## Setup Instructions
 
 ### Prerequisites
+
 Ensure you have the following installed on your system:
 
 - 💻 **Node.js**: [Download and install Node.js](https://nodejs.org/)
 - 🔧 **npm**: Comes bundled with Node.js
 
 ### Installation
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-repo/waka.git
@@ -46,7 +48,12 @@ Ensure you have the following installed on your system:
    npm install
    ```
 
+### Setup Postman Collection
+
+Download the Postman Collection `(thp-waka.collection.json)` and play with the APIs yourself. (TODO: add this)
+
 ### Running the Service
+
 1. Set up environment variables:
    - Create a `.env` file in the root directory.
    - Add the following keys:
@@ -89,6 +96,7 @@ We welcome contributions! Please follow these steps:
 ---
 
 ## Support
+
 For questions or support, reach out to us at ✉️ support@waka-api.com or visit our documentation site.
 
 ---
@@ -100,5 +108,3 @@ For questions or support, reach out to us at ✉️ support@waka-api.com or visi
 ---
 
 Unmask the truth, one text at a time with **Waka**! 🐲
-
-
