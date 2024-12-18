@@ -1,0 +1,30 @@
+{
+  "name": "waka",
+  "version": "1.0.0",
+  "description": "Waka: An API service designed to detect AI-generated text with exceptional precision and speed. 🐲",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "test": "vitest --silent",
+    "watch": "tsc --watch",
+    "nodemon:watch": "nodemon --watch dist dist/index.js",
+    "dev": "concurrently \"npm run watch\" \"npm run nodemon:watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "concurrently": "^9.1.0",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "tsconfig-paths": "^4.2.0"
+  }
+}
