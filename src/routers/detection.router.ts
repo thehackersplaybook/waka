@@ -1,4 +1,6 @@
 import express from "express";
+import { WakaAI } from "../core";
+
 const router = express.Router();
 
 router.post(
@@ -10,10 +12,8 @@ router.post(
     }
 
     try {
-      const aiScore = Math.random() * 100;
-      const aiReasoning = "This is a placeholder reasoning.";
-
-      res.json({ score: aiScore, reasoning: aiReasoning });
+      const { score, reasoning } = await WakaAI.getDetectionResult(text);
+      res.json({ score, reasoning });
     } catch (error) {
       res.status(500).json({ error: "Failed to process the text" });
     }
