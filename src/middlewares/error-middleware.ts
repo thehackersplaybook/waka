@@ -1,4 +1,5 @@
 import express from "express";
+import { StatusCodes } from "http-status-codes/build/cjs";
 
 export const errorMiddleware = (
   err: any,
@@ -10,6 +11,6 @@ export const errorMiddleware = (
     return next(err);
   }
   console.error("server error: ", err);
-  res.status(500);
+  res.status(StatusCodes.INTERNAL_SERVER_ERROR);
   res.json({ error: err.message });
 };

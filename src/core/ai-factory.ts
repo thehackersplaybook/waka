@@ -2,6 +2,7 @@ import { generateText, generateObject, LanguageModel } from "ai";
 import { AiClient, AiModel } from "../models";
 import { anthropic } from "@ai-sdk/anthropic";
 import { openai } from "@ai-sdk/openai";
+import { Constants } from "../constants";
 
 export class AiFactory {
   public static createByModel(model: AiModel): AiClient {
@@ -20,9 +21,11 @@ export class AiFactory {
 
   private static getModelLib(model: AiModel): LanguageModel | null {
     if (model === "openai") {
-      return openai("gpt-4o");
+      return openai(Constants.SUPPORTED_AI_MODELS.OPENAI_GPT_4O);
     } else if (model === "anthropic") {
-      return anthropic("claude-3-5-sonnet-latest");
+      return anthropic(
+        Constants.SUPPORTED_AI_MODELS.ANTHROPIC_CLAUDE_3_5_SONNET_LATEST
+      );
     }
 
     return null;

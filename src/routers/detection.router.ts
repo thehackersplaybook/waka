@@ -1,6 +1,7 @@
 import express from "express";
 import { WakaAI } from "../core";
 import { AiModel } from "../models";
+import { StatusCodes } from "http-status-codes/build/cjs";
 
 const router = express.Router();
 
@@ -11,7 +12,7 @@ const validateRequest = (
 ) => {
   const { text } = req.body;
   if (!text) {
-    res.status(400).json({ error: "Text is required" });
+    res.status(StatusCodes.BAD_REQUEST).json({ error: "Text is required" });
     return;
   }
   next();
@@ -29,7 +30,9 @@ router.post(
       );
       res.json({ score, reasoning });
     } catch (error) {
-      res.status(500).json({ error: "Failed to process the text" });
+      res
+        .status(StatusCodes.INTERNAL_SERVER_ERROR)
+        .json({ error: "Failed to process the text" });
     }
   }
 );
