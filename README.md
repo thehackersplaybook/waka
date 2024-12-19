@@ -97,7 +97,7 @@ We welcome contributions! Please follow these steps:
 
 ## Support
 
-For questions or support, reach out to us at ✉️ support@waka-api.com or visit our documentation site.
+For questions or support, reach out to us at ✉️ `thehackersplaybook0@gmail.com` or visit our documentation site.
 
 ---
 
