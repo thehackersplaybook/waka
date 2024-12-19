@@ -2,18 +2,18 @@
 
 ## Overview
 
-**Waka** is an API service designed to detect AI-generated text with exceptional precision and speed. Whether you're verifying content authenticity, combating misinformation, or simply curious about the origins of text, Waka provides a reliable and efficient solution for distinguishing between human-written and AI-generated content.
+**Waka** is an API service designed to detect AI-generated text using Gen AI models by Open AI and Anthropic. Whether you're verifying content authenticity, combating misinformation, or simply curious about the origins of text, Waka provides a reliable and efficient solution for distinguishing between human-written and AI-generated content.
 
 ---
 
 ## Features
 
-- ✨ **High Accuracy**: Waka employs state-of-the-art Gen AI models from OpenAI and Anthropic to differentiate AI-generated text from human-authored content.
-- ⏳ **Fast Responses**: Optimized for low-latency detection, making it suitable for real-time applications.
-- 🛠️ **Scalable**: Supports high-volume requests, perfect for enterprise-level integrations.
-- ⚙️ **Customizable Thresholds**: Tailor detection sensitivity to your specific use case.
-- 🌍 **Multi-Language Support**: Works with text in multiple languages to ensure wide applicability.
-- 🔧 **Developer-Friendly**: Intuitive API with comprehensive documentation and easy-to-use endpoints.
+- ✨ **Scoring & Reasoning**: Waka generates a 'ai geneated score' and a natural language reason to justify the score. This design decision was taken in favour of our XAI (Explainable AI) initiatives.
+- ⏳ **Fast Responses**: Optimized for low-latency detection, making it suitable for real-time applications. The bottleneck is the LLM, so you can switch to more lightweight models like GPT 4o Mini for quicker responses.
+- 🛠️ **Scalable**: Supports high-volume requests, perfect for enterprise-level integrations. Since you use your own key, this depends on your LLM Provider Plan.
+- ⚙️ **Customizable Thresholds**: Tailor detection sensitivity to your specific use case. (WIP)
+- 🌍 **Multi-Language Support**: Works with text in multiple languages to ensure wide applicability. Most LLMs include training data written in languages other than English, so this feature comes out of the box.
+- 🔧 **Developer-Friendly**: Intuitive API with comprehensive documentation and easy-to-use endpoints. There's a Postman Collection provided below. In future, we plan to add a detailed documentation and setup page to make life easier for adopters.
 
 ---
 
