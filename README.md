@@ -10,7 +10,7 @@
 
 ## Features
 
-- ✨ **Scoring & Reasoning**: Waka generates a 'ai geneated score' and a natural language reason to justify the score. This design decision was taken in favour of our XAI (Explainable AI) initiatives.
+- ✨ **Scoring & Reasoning**: Waka generates a 'ai generated score' and a natural language reason to justify the score. This design decision was taken in favour of our XAI (Explainable AI) initiatives.
 - ⏳ **Fast Responses**: Optimized for low-latency detection, making it suitable for real-time applications. The bottleneck is the LLM, so you can switch to more lightweight models like GPT 4o Mini for quicker responses.
 - 🛠️ **Scalable**: Supports high-volume requests, perfect for enterprise-level integrations. Since you use your own key, this depends on your LLM Provider Plan.
 - ⚙️ **Customizable Thresholds**: Tailor detection sensitivity to your specific use case. (WIP)
