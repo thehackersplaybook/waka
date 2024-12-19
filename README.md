@@ -1,4 +1,4 @@
-# Waka: Unmasking AI-Generated Text with Precision and Speed 🐲
+# Waka: Detect AI-Generated Text 🐲
 
 > > Disclaimer 🚦: This project is currently in an experimental stage, use at your own discretion. Please do not use Waka for mission critical applications yet.
 
