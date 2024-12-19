@@ -1,5 +1,7 @@
 # Waka: Unmasking AI-Generated Text with Precision and Speed 🐲
 
+> > Disclaimer 🚦: This project is currently in an experimental stage, use at your own discretion. Please do not use Waka for mission critical applications yet.
+
 ## Overview
 
 **Waka** is an API service designed to detect AI-generated text using Gen AI models by Open AI and Anthropic. Whether you're verifying content authenticity, combating misinformation, or simply curious about the origins of text, Waka provides a reliable and efficient solution for distinguishing between human-written and AI-generated content.
