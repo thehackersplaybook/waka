@@ -60,10 +60,10 @@ Download the Postman Collection `(thp-waka.collection.json)` and play with the A
    - Create a `.env` file in the root directory.
    - Add the following keys:
      ```env
-     OPENAI_KEY=your-openai-key
-     ANTHROPIC_KEY=your-anthropic-key
+     OPENAI_API_KEY=your-openai-key
+     ANTHROPIC_API_KEY=your-anthropic-key
      ```
-2. Start the development server:
+2. Start the development server on `http://localhost:3000`:
    ```bash
    npm start
    ```
